@@ -43,6 +43,7 @@ class ImageFitting(Dataset):
         image = self.transform(image)
 
         step_val = np.full((self.coords.size(0),1),idx)
+        print(step_val)
         step = torch.from_numpy(step_val)
 
         model_input = torch.cat((self.coords, step), 1)
