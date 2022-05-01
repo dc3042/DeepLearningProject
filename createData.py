@@ -10,8 +10,6 @@ import argparse
 def main():
 
 	currentdir = os.path.dirname(os.path.realpath(__file__))
-	parentdir = os.path.dirname(currentdir)
-	rootrdir = os.path.dirname(os.path.dirname(parentdir))
 	data_dir = os.path.join(currentdir,'data')
 
 	parser = argparse.ArgumentParser(description='Diffusion')
