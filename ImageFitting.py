@@ -41,7 +41,10 @@ class ImageFitting(Dataset):
         
         image = Image.open(img_path)
         image = self.transform(image)
-        data_item = {'image': image,
-                     'coords': self.coords,
-                     'step': idx}
-        return data_item
+
+        step = torch.from_numpy(np.full((self.coords.size(0)),1),idx)
+
+        model_input = torch.cat((self.coords, step), 1)
+
+
+        return model_input, image
