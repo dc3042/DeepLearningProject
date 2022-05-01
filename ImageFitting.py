@@ -29,7 +29,7 @@ class ImageFitting(Dataset):
     def __init__(self, img_dir, transform=None, target_transform=None):
         self.img_dir = img_dir
         self.transform = transform
-        self.coords = get_mgrid(sidelength, 2)
+        self.coords = get_mgrid()
 
     def __len__(self):
         return len(os.listdir(self.img_dir))
