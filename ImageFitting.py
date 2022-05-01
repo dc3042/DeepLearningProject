@@ -15,7 +15,7 @@ import time
 
 
 
-def get_mgrid(sidelen, dim=2):
+def get_mgrid(sidelen=256, dim=2):
     '''Generates a flattened grid of (x,y,...) coordinates in a range of -1 to 1.
     sidelen: int
     dim: int'''
