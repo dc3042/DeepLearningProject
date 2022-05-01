@@ -62,6 +62,5 @@ cameraman = ImageFitting(data_dir, transform=Compose([
     ]))
 
 dataloader = DataLoader(cameraman, batch_size=1, pin_memory=True, num_workers=0)
-for i in range(len(dataloader)):
-    d = next(iter(dataloader))
-    print(d)
+d = next(iter(dataloader))
+print(d)
