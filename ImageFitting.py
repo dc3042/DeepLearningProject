@@ -39,6 +39,7 @@ class ImageFitting(Dataset):
 
     def __getitem__(self, idx):
         img_path = os.path.join(self.img_dir, 'h5_f_{iter:010d}.{ext}'.format(iter=idx, ext='png'))
+        print(img_path)
         image = read_image(img_path)
         if self.transform:
             image = self.transform(image)
@@ -49,7 +50,7 @@ class ImageFitting(Dataset):
                      'step': idx}
 
 
-        return image
+        return data_item
 
 currentdir = os.path.dirname(os.path.realpath(__file__))
 data_dir = os.path.join(currentdir,'data')
