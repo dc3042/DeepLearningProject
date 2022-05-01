@@ -42,7 +42,7 @@ class ImageFitting(Dataset):
         image = Image.open(img_path)
         image = self.transform(image)
 
-        step = torch.from_numpy(np.full((self.coords.size(0)),1),idx)
+        step = torch.from_numpy(np.full((self.coords.size(0),1),idx))
 
         model_input = torch.cat((self.coords, step), 1)
 
