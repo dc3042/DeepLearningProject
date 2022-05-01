@@ -51,8 +51,15 @@ class ImageFitting(Dataset):
 
         return image
 
+currentdir = os.path.dirname(os.path.realpath(__file__))
+data_dir = os.path.join(currentdir,'data')
 
-cameraman = ImageFitting(256)
+cameraman = ImageFitting(data_dir, transform=Compose([
+        Resize(256),
+        ToTensor(),
+        Normalize(torch.Tensor([0.5]), torch.Tensor([0.5]))
+    ]))
+
 dataloader = DataLoader(cameraman, batch_size=1, pin_memory=True, num_workers=0)
 for i in range(len(dataloader)):
     d = next(iter(dataloader))
