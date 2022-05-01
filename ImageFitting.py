@@ -26,9 +26,13 @@ def get_mgrid(sidelen=256, dim=2):
 
 class ImageFitting(Dataset):
 
-    def __init__(self, img_dir, transform=None, target_transform=None):
+    def __init__(self, img_dir):
         self.img_dir = img_dir
-        self.transform = transform
+        self.transform = Compose([
+            Resize(256),
+            ToTensor(),
+            Normalize(torch.Tensor([0.5]), torch.Tensor([0.5]))
+        ])
         self.coords = get_mgrid()
 
         self.len = len(os.listdir(self.img_dir))
@@ -39,13 +43,10 @@ class ImageFitting(Dataset):
 
     def __getitem__(self, idx):
         img_path = os.path.join(self.img_dir, 'h5_f_{iter:010d}.{ext}'.format(iter=idx, ext='png'))
-        print(img_path)
-        image = read_image(img_path)
-
-        print
         
-        if self.transform:
-            image = self.transform(image)
+        image = Image.fromarray(read_image(img_path))
+
+        image = self.transform(image)
 
 
         data_item = {'image': image,
@@ -60,6 +61,7 @@ data_dir = os.path.join(currentdir,'data')
 
 cameraman = ImageFitting(data_dir, transform=Compose([
         Resize(256),
+        ToTensor(),
         Normalize(torch.Tensor([0.5]), torch.Tensor([0.5]))
     ]))
 
