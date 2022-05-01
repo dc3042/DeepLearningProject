@@ -41,6 +41,9 @@ class ImageFitting(Dataset):
         img_path = os.path.join(self.img_dir, 'h5_f_{iter:010d}.{ext}'.format(iter=idx, ext='png'))
         print(img_path)
         image = read_image(img_path)
+
+        print
+        
         if self.transform:
             image = self.transform(image)
 
@@ -57,7 +60,6 @@ data_dir = os.path.join(currentdir,'data')
 
 cameraman = ImageFitting(data_dir, transform=Compose([
         Resize(256),
-        ToTensor(),
         Normalize(torch.Tensor([0.5]), torch.Tensor([0.5]))
     ]))
 
