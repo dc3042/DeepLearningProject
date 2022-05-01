@@ -10,6 +10,7 @@ import numpy as np
 import skimage
 import matplotlib.pyplot as plt
 import time
+
 def get_mgrid(sidelen=256, dim=2):
     '''Generates a flattened grid of (x,y,...) coordinates in a range of -1 to 1.
     sidelen: int
@@ -18,7 +19,9 @@ def get_mgrid(sidelen=256, dim=2):
     mgrid = torch.stack(torch.meshgrid(*tensors), dim=-1)
     mgrid = mgrid.reshape(-1, dim)
     return mgrid
+
 class ImageFitting(Dataset):
+    
     def __init__(self, img_dir):
         self.img_dir = img_dir
         self.transform = Compose([
@@ -29,8 +32,10 @@ class ImageFitting(Dataset):
         self.coords = get_mgrid()
         self.len = len(os.listdir(self.img_dir))
         print(self.len)
+    
     def __len__(self):
         return self.len
+    
     def __getitem__(self, idx):
         img_path = os.path.join(self.img_dir, 'h5_f_{iter:010d}.{ext}'.format(iter=idx, ext='png'))
         
