@@ -31,8 +31,11 @@ class ImageFitting(Dataset):
         self.transform = transform
         self.coords = get_mgrid()
 
+        self.len = len(os.listdir(self.img_dir))
+        print(self.len)
+
     def __len__(self):
-        return len(os.listdir(self.img_dir))
+        return self.len
 
     def __getitem__(self, idx):
         img_path = os.path.join(self.img_dir, 'h5_f_{iter:010d}.{ext}'.format(iter=idx, ext='png'))
