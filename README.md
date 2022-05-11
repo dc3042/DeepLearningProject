@@ -188,7 +188,7 @@ In addition, the set of weights that performed third best on the pixel values ac
 
 Overall, the set (1.0, 0.01, 0.001, 0.0), which gives the second-best performance on the pixel loss, also placed in the lowest group on the gradient loss, making it overall the best performing set of weights. The resulting video for this run can be seen below. The images shown are organized by column from left-to-right (pixel, gradient, laplacian, time derivative) where the top row is the ground truth and bottom row is the run's output.
 
-![](https://i.imgur.com/2HJv1gM.gif =x350)
+![](https://i.imgur.com/2HJv1gM.gif)
 
 
 ## Conclusion
