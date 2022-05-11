@@ -208,5 +208,5 @@ Through our experiments, we found the following configurations to give the best 
 [1] https://www.cns.nyu.edu/pub/eero/wang03-reprint.pdf \
 [2] https://medium.com/srm-mic/all-about-structural-similarity-index-ssim-theory-code-in-pytorch-6551b455541e \
 [3] https://arxiv.org/abs/2006.09661 \
-[4] https://arxiv.org/abs/1812.02822 \
+[4] https://arxiv.org/abs/1812.02822 
 
