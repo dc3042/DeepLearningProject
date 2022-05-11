@@ -1,7 +1,7 @@
 # Learning Derivatives with Implicit Neural Representations
 
 ## Project Group Members
-David Cho, dc3042
+David Cho, dc3042 \
 Nathalie Hager, nmh2147
 
 ## Description of the project
