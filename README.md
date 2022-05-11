@@ -1,5 +1,9 @@
 # Learning Derivatives with Implicit Neural Representations
 
+## Project Group Members
+David Cho, dc3042
+Nathalie Hager, nmh2147
+
 ## Description of the project
 
 In this project, we explore various hyperparameters for training an implicit neural representation of a 2D isotropic diffusion sequence of a single image. 
