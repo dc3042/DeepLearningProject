@@ -88,26 +88,26 @@ We quantitatively examined what the best learning rate and scheduler are in term
 
 ##### 1.1 Pixel MSE Loss
 ![](https://i.imgur.com/whFGKGI.png)
-![](https://i.imgur.com/WeeI9zV.png =x300)
+![](https://i.imgur.com/WeeI9zV.png)
         
         
 ##### 1.2 Pixel SSIM
 ![](https://i.imgur.com/NExMUtW.png)
-![](https://i.imgur.com/rROSCmV.png =x300)
+![](https://i.imgur.com/rROSCmV.png)
 
 
 ##### 1.3 Gradient MSE Loss
 ![](https://i.imgur.com/xJSzlad.png)
-![](https://i.imgur.com/KCqOygz.png =x300)
+![](https://i.imgur.com/KCqOygz.png)
 
 
 ##### 1.4 Laplacian MSE Loss
 ![](https://i.imgur.com/ccYlohy.png)
-![](https://i.imgur.com/9KTeSAp.png =x300)
+![](https://i.imgur.com/9KTeSAp.png)
 
 ##### 1.5 Time Derivative MSE Loss
 ![](https://i.imgur.com/CljmsRV.png)
-![](https://i.imgur.com/ogyEQo1.png =x300)
+![](https://i.imgur.com/ogyEQo1.png)
 
 
 ##### Discussion of Learning Rate Experiments
@@ -138,26 +138,26 @@ Weight combinations used (Pixel value, Gradients, Laplacian, Pixel time derivati
 
 ##### 2.1 Pixel MSE Loss
 ![](https://i.imgur.com/j2cAhSw.png)
-![](https://i.imgur.com/QY2EHdo.png =x300)
+![](https://i.imgur.com/QY2EHdo.png)
 
 
 ##### 2.2 Pixel SSIM
 ![](https://i.imgur.com/uZNODWE.png)
-![](https://i.imgur.com/NpNhzi8.png =x300)
+![](https://i.imgur.com/NpNhzi8.png)
 
 
 ##### 2.3 Gradient MSE Loss
 ![](https://i.imgur.com/lOJ0xhe.png)
-![](https://i.imgur.com/AqS5kn5.png =x300)
+![](https://i.imgur.com/AqS5kn5.png)
 
 
 ##### 2.4 Laplacian MSE Loss
 ![](https://i.imgur.com/wJDf1rG.png)
-![](https://i.imgur.com/dEnIhH5.png =x300)
+![](https://i.imgur.com/dEnIhH5.png)
 
 ##### 2.5 Time Derivative MSE Loss
 ![](https://i.imgur.com/iWQLdgW.png)
-![](https://i.imgur.com/iGxEIHr.png =x300)
+![](https://i.imgur.com/iGxEIHr.png)
 
 
 
